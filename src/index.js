@@ -5,7 +5,8 @@ import dotenv from 'dotenv'
 //import { DB_NAME } from "./constants";
 import express from "express";
 import connectDB from "./db/index.js";
-const app = express()
+import { app } from './app.js';
+//const app = express()
 
 dotenv.config({
     path:'./env'
@@ -13,6 +14,9 @@ dotenv.config({
   /* function connectDB(){}
 connectDB() */
 
+/* app.get('/',(req,res)=>{
+  res.send("hello")
+}) */
 
 connectDB()
 .then(()=>{
